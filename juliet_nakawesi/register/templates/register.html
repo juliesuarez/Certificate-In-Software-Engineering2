@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1 style="text-align: center; background-color: black; width: 50%; margin-left: 300px; color: white; font-weight: bolder;"><em>GENQ KYC FORM</em></h1>
+<style>
+        .form-control {
+            border: 1px solid black;
+        }
+    </style>
+<form method="POST" action="" style="width: 50%; margin-left: 300px;">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <br>
+    <button type="submit" class="btn btn-info" style="margin-left: 230px; width: 200px;">REGISTER</button>
+</form>
+{% endblock %}

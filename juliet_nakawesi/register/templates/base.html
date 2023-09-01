@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} <title>{{title|default:'GENQ Company '}}</title> {% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    
+</head>
+<body style="background-color: #e3f2fd;">
+    <style>
+        .container-fluid {
+        position: fixed;
+        top: 0;
+        background-color: black;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        z-index: 500;
+        }
+        .bottom {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+    </style>
+    <div>
+        <nav class="navbar" style="background-color: black">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <P style="color: white;" class="nav-link" aria-current="page" href="">
+                            GENQ Company
+                        </P>
+                      </li>
+                      <li class="nav-item">
+                        <a style="color: white; margin-left: ;"  class="nav-link active" href="/admin">ADMIN</a>
+                      </li>
+                      <li class="nav-item">
+                        <a style="color: white; margin-left: 900px;"  class="nav-link active" href="/register">REGISTER</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </nav>
+          
+    </div>
+    <br><br>
+    {% block content %}
+    {% endblock %}
+    <br><br><br>
+    <div class="bottom">
+        <footer style="background-color: black; text-align: center; color: #FFF6E0;">
+            <p>@2023 GENQ Company. All rights reserved.</p>
+            <i class="fa fa-copyright" style="color:#FFF6E0">
+              juliesuareznakawesi
+            </i>
+            <i class="fa fa-twitter-square">
+              <a href="https://twitter.com/home">@juliecristiana</a>
+            </i>
+        </footer>
+    </div>
+</body>
+
+</html>
